@@ -2,12 +2,11 @@
 #include <random>
 #include <list>
 #include <fstream>
-#include "PlikWyjsciowy.h"
+#include <sstream>
 
 #define LIMIT 100 // teoretycznie można by tu użyć int limit ale troche czasu będzie generować te pare milionów liczb
 
 using namespace std;
-using namespace strumienie;
 
 int generateRandom(int limit)
 {
