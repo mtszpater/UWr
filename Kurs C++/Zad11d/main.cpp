@@ -16,7 +16,7 @@ using namespace std;
 int main() {
     std::deque <double > v;
 
-    auto fun = [] ( int x ) { return x < 3 && x > 0;  } ;
+    auto fun = [] ( double x ) { return x < 3 && x > 0;  } ;
 
     std::default_random_engine generator;
     std::normal_distribution<double> distribution(6, 2);
