@@ -4,7 +4,7 @@
 #include <fstream>
 #include "PlikWyjsciowy.h"
 
-#define LIMIT 100
+#define LIMIT 100 // teoretycznie można by tu użyć int limit ale troche czasu będzie generować te pare milionów liczb
 
 using namespace std;
 using namespace strumienie;
@@ -69,7 +69,7 @@ int main() {
     int min = -1;
     int average = 0;
     int count = 0;
-    
+
     for( auto const& l : lista ) {
         ++ count;
 
