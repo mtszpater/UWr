@@ -103,10 +103,18 @@ public class WzorWielomianu {
         if(args.length < 2)
             throw new IllegalArgumentException("Za mało argumentów");
 
-        if(new Integer(args[1]) < 0 || new Integer(args[1]) > 66)
-            throw new IllegalArgumentException("Podales zla potege");
+        try {
 
-        System.out.println(oblicz(args[0], new Integer(args[1])));
+            if(Integer.parseInt(args[1]) < 0 || Integer.parseInt(args[1]) > 66)
+                throw new IllegalArgumentException("liczba " + args[1] + " jest błedna");
+            else
+                System.out.println(oblicz(args[0], new Integer(args[1])));
+
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException(args[1] + " chyba nie jest liczbą");
+        }
+
+
 
 
     }
