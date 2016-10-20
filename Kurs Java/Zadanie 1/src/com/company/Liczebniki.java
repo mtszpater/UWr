@@ -9,8 +9,15 @@ public class Liczebniki {
             "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
             "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 
+    private static final String[] jed_porzad = {
+            "zeroth", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth",
+            "eleventh", "twelfth", "thirteenth", "fourteenth", "fifteenth", "sixteenth", "seventeenth", "eighteenth", "nineteenth"};
+
     private static final String[] dzies_glowne = {
             "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+
+    private static final String[] dzies_porzad = {
+            "twentieth", "thirtieth", "fortieth", "fiftieth", "sixtieth", "seventieth", "eightieth", "ninetieth"};
 
     private static final String[] duze_glowne = {
             "thousand", "million", "billion"};
@@ -18,9 +25,6 @@ public class Liczebniki {
     private static final String[] duze_porzad = {
             "hundredth", "thousandth", "millionth", "billionth"};
 
-    private static final String[] jed_porzad = {
-            "zeroth", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth",
-            "eleventh", "twelfth", "thirteenth", "fourteenth", "fifteenth", "sixteenth", "seventeenth", "eighteenth", "nineteenth"};
 
 
 
@@ -40,11 +44,11 @@ public class Liczebniki {
             return jed_porzad[n];
         }
 
-        String s = dzies_glowne[n / 10 - 2];
         if (n % 10 == 0) {
-            return s;
+            return dzies_porzad[n / 10 - 2];
         }
-        return s + "-" + jed_porzad[n % 10];
+
+        return dzies_glowne[n / 10 - 2] + "-" + jed_porzad[n % 10];
     }
 
 
@@ -131,12 +135,15 @@ public class Liczebniki {
                 if (t > 0) {
                     s2 = s2 + " " + duze_glowne[t-1];
                 }
+
+
                 if (s == null) {
                     s = s2;
                 }
                 else {
                     s = s2 + " " + s;
                 }
+
             }
             n /= 1000;
             t++;
