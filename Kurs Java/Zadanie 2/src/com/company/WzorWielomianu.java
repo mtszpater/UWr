@@ -91,7 +91,7 @@ public class WzorWielomianu {
         if(s.substring(0, p).length() == 0 || s.substring(p + 1).length() == 0)
             throw new IllegalArgumentException("Podales zly format wyrazenia");
 
-        if (p == -1) {
+        if (p == s.indexOf("-")) {
             return generuj_poczatek(s, n) + wartosc_dodatnia(s.substring(0, p), s.substring(p + 1), n, true);
         } else {
             return generuj_poczatek(s, n) + wartosc_dodatnia(s.substring(0, p), s.substring(p + 1), n, false);

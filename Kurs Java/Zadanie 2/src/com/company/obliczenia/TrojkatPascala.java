@@ -6,7 +6,7 @@ package com.company.obliczenia;
 public class TrojkatPascala {
 
     private final static int MAX = 67; // 10 to na pewno zbyt mało!
-    private static long[][] trojkat = new long[MAX][MAX*2];
+    private static long[][] trojkat = new long[MAX][MAX];
 
     public static long[][] getTrojkat() {
         return trojkat;
