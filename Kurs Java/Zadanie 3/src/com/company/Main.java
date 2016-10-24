@@ -111,6 +111,20 @@ public class Main {
         System.out.println("Dodawanie wynik: " + Wyrazenie.sumuj(s));
         System.out.println("Mnozenie wynik: " + Wyrazenie.pomnoz(s));
 
+
+
+        // Test reszty wyrazen
+
+        System.out.println(new Bezwgledna(new Stala(-5.0)) + " = " + new Bezwgledna(new Stala(-5.0)).oblicz() );
+        System.out.println(new Cosinus(new Stala(-5.0)) + " = " + new Cosinus(new Stala(-5.0)).oblicz() );
+        System.out.println(new Sinus(new Stala(0.20)) + " = " + new Sinus(new Stala(0.20)).oblicz() );
+        System.out.println(new Odwrotna(new Stala(2)) + " = " + new Odwrotna(new Stala(2)).oblicz() );
+        System.out.println(new Przeciwna(new Stala(-5.0)) + " = " + new Przeciwna(new Stala(-5.0)).oblicz() );
+        System.out.println(new Max(new Stala(-5.0), new Zmienna("x")) + " = " + new Max(new Stala(-5.0), new Zmienna("x")).oblicz() );
+        System.out.println(new Min(new Stala(-5.0), new Zmienna("x")) + " = " + new Min(new Stala(-5.0), new Zmienna("x")).oblicz() );
+        System.out.println(new Modulo(new Stala(-5.0), new Zmienna("x")) + " = " + new Modulo(new Stala(-5.0), new Zmienna("x")).oblicz() );
+
+
     }
 
 

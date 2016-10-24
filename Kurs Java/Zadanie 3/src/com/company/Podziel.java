@@ -18,7 +18,7 @@ public class Podziel extends Operator2Arg{
 
         if(b.oblicz() == 0)
         {
-            throw new IllegalArgumentException("Nie dziel przez 0:>");
+            throw new IllegalArgumentException("Cholero, ie dziel przez 0:>");
         }
 
         return a.oblicz() / b.oblicz();
