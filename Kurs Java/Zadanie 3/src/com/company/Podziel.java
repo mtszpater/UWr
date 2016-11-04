@@ -4,12 +4,9 @@ package com.company;
  * author @pater
  */
 public class Podziel extends Operator2Arg{
-    private Wyrazenie a;
-    private Wyrazenie b;
 
     public Podziel(Wyrazenie a, Wyrazenie b) {
-        this.a = a;
-        this.b = b;
+        super(a,b);
 
     }
 

@@ -12,10 +12,9 @@ package com.company;
  * author @pater
  */
 public class Sinus extends Operator1Arg {
-    private Wyrazenie a;
 
     public Sinus(Wyrazenie a) {
-        this.a = a;
+        super(a);
     }
 
     @Override

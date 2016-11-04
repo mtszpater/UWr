@@ -13,12 +13,8 @@ package com.company;
  */
 public class Modulo extends Operator2Arg {
 
-    private Wyrazenie a;
-    private Wyrazenie b;
-
     public Modulo(Wyrazenie a, Wyrazenie b) {
-        this.a = a;
-        this.b = b;
+        super(a,b);
 
     }
 

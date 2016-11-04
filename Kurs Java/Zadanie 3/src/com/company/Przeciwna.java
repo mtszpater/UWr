@@ -12,10 +12,9 @@ package com.company;
  * author @pater
  */
 public class Przeciwna extends Operator1Arg{
-    private Wyrazenie a;
 
     public Przeciwna(Wyrazenie a) {
-        this.a = a;
+        super(a);
     }
 
     @Override

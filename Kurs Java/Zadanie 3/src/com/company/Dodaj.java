@@ -5,12 +5,8 @@ package com.company;
  */
 public class Dodaj extends Operator2Arg {
 
-    private Wyrazenie a;
-    private Wyrazenie b;
-
     public Dodaj(Wyrazenie a, Wyrazenie b) {
-        this.a = a;
-        this.b = b;
+        super(a,b);
     }
 
     @Override

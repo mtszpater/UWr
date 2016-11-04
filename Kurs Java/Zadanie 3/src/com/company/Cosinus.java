@@ -12,10 +12,9 @@ package com.company;
  * author @pater
  */
 public class Cosinus extends Operator1Arg {
-    private Wyrazenie a;
 
-    public Cosinus(Wyrazenie a) {
-        this.a = a;
+    public Cosinus(Wyrazenie a){
+        super(a);
     }
 
     @Override

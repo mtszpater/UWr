@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /* id */
+        #mySpan {
+            color: red;
+        }
+        /* class */
+        .mySpan {
+            color: greenyellow;
+        }
+        /*Descendant selectors*/
+        li {
+            list-style-type: disc;
+        }
+        li li {
+            list-style-type: square;
+            color: rebeccapurple;
+        }
+        /* child */
+        .mySpan { background-color: green; }
+        span > .mySpan {
+            background-color: DodgerBlue;
+        }
+        /* type */
+        h1{
+            border: 3px solid darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>type</h1>
+
+    <span id="mySpan">
+        Jakiś tekst w środku znaczników span (uzywamy selektora id)
+    </span>
+    <br>
+    <span class="mySpan">
+        Jakiś tekst w środku znaczników span (uzywamy seleketora class)
+    </span>
+    <br>
+
+
+    <!-- child -->
+    <span>
+        Tekst w zwyklym span <br />
+        <span class="mySpan">
+            tekst w Span > mySpan
+        </span>
+    </span>
+
+    <div>
+        <ul>
+            <li>
+                <div>Item 1</div>
+                <ul>
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+            <li>
+                <div>Item 2</div>
+                <ul>
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

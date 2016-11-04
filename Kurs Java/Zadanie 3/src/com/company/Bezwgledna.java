@@ -12,10 +12,9 @@ package com.company;
  * author @pater
  */
 public class Bezwgledna extends Operator1Arg {
-    private Wyrazenie a;
 
     public Bezwgledna(Wyrazenie a) {
-        this.a = a;
+        super(a);
     }
 
     @Override

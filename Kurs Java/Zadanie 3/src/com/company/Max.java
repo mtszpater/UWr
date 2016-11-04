@@ -12,12 +12,9 @@ package com.company;
  * author @pater
  */
 public class Max extends Operator2Arg {
-    private Wyrazenie a;
-    private Wyrazenie b;
 
     public Max(Wyrazenie a, Wyrazenie b) {
-        this.a = a;
-        this.b = b;
+        super(a,b);
     }
 
     @Override

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .boxmodel {
+            background-color: yellowgreen;
+            width: 150px;
+            padding: 15px;
+            border: 3px dashed blue;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="boxmodel">
+    Jakis tekst wewnątrz div
+</div>
+
+<div style="display: inline; " class="boxmodel">
+    Jakis tekst wewnątrz div + display; inline
+</div>
+<!-- Konieczne br, bo inline najezdza na siebie -->
+<br/>
+<br/>
+<br/>
+<br/>
+<!-- width nie dziala dla span -->
+<span class="boxmodel">
+    Jakis tekst wewnatrz span
+</span>
+
+<!-- width nie dziala dla span -->
+<span style="display: block;" class="boxmodel">
+    Jakis tekst wewnatrz span + display: block;
+</span>
+</body>
+</html>

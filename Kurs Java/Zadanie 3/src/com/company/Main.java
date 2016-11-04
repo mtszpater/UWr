@@ -1,13 +1,15 @@
-/*
- * Copyright (c) 2016. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
+/**
+ *
+ * @author  Pater
+ * @version 1.0
+ * @since   2016-11-15
  */
 
 package com.company;
 
+/**
+ * Główna klasa rozruchowa programu
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -56,6 +58,7 @@ public class Main {
         Wyrazenie a_x = new Dodaj( new Stala(3.0), new Stala(5.0));
 
         System.out.println(a_x + " = " + a_x.oblicz());
+
 
         Wyrazenie c_x = new Dodaj( new Stala(3.0), new Pomnoz(new Zmienna("x"), new Stala(7.0)));
 

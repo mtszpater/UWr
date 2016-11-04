@@ -4,16 +4,12 @@ package com.company;
  * author @pater
  */
 public class Logarytmuj extends Operator2Arg {
-    private Wyrazenie a;
-    private Wyrazenie b;
 
     public Logarytmuj(Wyrazenie a, Wyrazenie b) {
-        this.a = a;
-        this.b = b;
+        super(a,b);
     }
-
     @Override
-    public double oblicz() {
+    public double oblicz() throws IllegalArgumentException {
 
         if(a.oblicz() <= 1 || b.oblicz() < 0)
         {
@@ -22,6 +18,7 @@ public class Logarytmuj extends Operator2Arg {
 
         return a.oblicz() * b.oblicz();
     }
+
     @Override
     public String toString() {
         return "log("+a+"," + b+")";

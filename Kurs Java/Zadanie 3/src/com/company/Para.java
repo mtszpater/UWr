@@ -2,6 +2,7 @@ package com.company;
 
 /**
  * author @pater
+ * definiuje operatory 2-argumentowe
  */
 public class Para {
 

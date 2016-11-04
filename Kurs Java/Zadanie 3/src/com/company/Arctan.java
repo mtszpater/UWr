@@ -3,11 +3,13 @@ package com.company;
 /**
  * author @pater
  */
-public class Arctan extends Operator1Arg {
-    private Wyrazenie a;
 
+
+public class Arctan extends Operator1Arg {
+
+    /* Class constructor */
     public Arctan(Wyrazenie a) {
-        this.a = a;
+        super(a);
     }
 
     @Override

@@ -2,10 +2,12 @@ package com.company;
 
 /**
  * author @pater
+ * Definiuje zmienną
  */
 public class Zmienna extends Wyrazenie {
 
     static private final Zbior z;
+
 
     static {
         z = new Zbior(10);
@@ -21,6 +23,11 @@ public class Zmienna extends Wyrazenie {
     }
 
 
+    /**
+     *
+     * @param o dowolny obiekt
+     * @return boolean
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,7 +45,6 @@ public class Zmienna extends Wyrazenie {
     }
 
     @Override
-
     public double oblicz() {
         return z.czytaj(value);
     }

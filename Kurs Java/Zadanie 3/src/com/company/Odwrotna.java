@@ -13,10 +13,9 @@ package com.company;
  */
 public class Odwrotna extends Operator1Arg{
 
-    private Wyrazenie a;
 
     public Odwrotna(Wyrazenie a) {
-        this.a = a;
+        super(a);
     }
 
     @Override

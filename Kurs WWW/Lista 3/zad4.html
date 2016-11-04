@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .boxmodel {
+            background-color: yellowgreen;
+            width: 150px;
+            padding: 15px;
+            border: 3px dashed blue;
+            margin: 30px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .boxmodelVertical {
+            background-color: yellowgreen;
+            width: 150px;
+            padding: 15px;
+            border: 3px dashed blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .center {
+            line-height: 200px;
+            height: 200px;
+            border: 3px solid green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!--Teoretycznie mozemy dac text-align; center w .boxmodel, ale chyba nie jest to zbyt estetyczne?-->
+<div class="boxmodel">
+    Jakis tekst, ktory chcemy wysrodkować
+</div>
+<!--Lub lepiej -->
+<div class="boxmodel">
+    <p style="text-align: center;">Jakis tekst, ktory chcemy wysrodkować</p>
+</div>
+<!--Pionowo-->
+<div class="boxmodelVertical">
+    <p style="text-align: center;">Jakis tekst, ktory chcemy wysrodkować</p>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<span style="display: block;" class="center">
+    jakis tekst w span
+</span>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<span class="center">
+    jakis tekst w span bez display:block
+</span>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="center">
+    Mozna jeszce tak
+</div>
+
+</body>
+</html>
+
