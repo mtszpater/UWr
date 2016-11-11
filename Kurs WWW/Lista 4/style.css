@@ -1,0 +1,337 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+
+@keyframes bodyAnimation {
+
+	0% {
+		opacity: 0.1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@keyframes alinkAnimation {
+
+	0% {
+
+	}
+	50% {
+		font-size: 15px;
+		color: #ee0979;
+	}
+	100% {
+
+	}
+
+}
+@keyframes pageWrapperAnimation {
+
+	0% {
+		opacity: 0.5;
+		color: #ee0979;
+		background: #43cea2; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+
+	25% {
+		opacity: 0.7;
+		color: #D6D6FC;
+		background: #41295a; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #41295a , #2F0743); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #41295a , #2F0743); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+
+	50% {
+		opacity: 0.9;
+		color: #FFFFFF;
+		background: #F3904F; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #F3904F , #3B4371); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #F3904F , #3B4371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+	100% {
+		opacity: 0.5;
+		color: #FFFFFF;
+		background: #ee0979; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #ee0979 , #ff6a00); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #ee0979 , #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+
+}
+
+@keyframes h3Animation {
+
+	50% {
+		color: white;
+		border:15px dotted;
+	}
+
+}
+@keyframes rocketAnimation {
+
+
+	100% {
+		transform: rotate(360deg);
+	}
+
+}
+
+
+
+@keyframes textHoverAnimation {
+
+	50% {
+		color: red;
+		font-size: 25px;
+	}
+}
+
+p::first-letter{
+	background: #4ECDC4; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #4ECDC4 , #556270); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #4ECDC4 , #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: #FFF;
+	font-size: 24px;
+	font-style: normal;
+	display: inline-block;
+	padding: 0 5px;
+	border-radius: 3px;
+	margin-right: 2px;
+	font-family: serif;
+}
+
+#css-zen-garden{
+	background-color: black;
+	animation-name: bodyAnimation;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+}
+
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: wheat;
+	margin: 0; 
+	padding: 0;
+	}
+
+
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0;
+	display: inline-block;
+	position: relative;
+	animation-name: h3Animation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	color: #7D775C;
+	border:15px solid transparent;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none;
+	animation-name: alinkAnimation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+
+
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	animation-name: textHoverAnimation;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+.page-wrapper {
+
+
+	animation-name: pageWrapperAnimation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	padding: 0 175px 0 110px;
+	margin: 0; 
+	position: fixed;
+	}
+
+.intro { 
+	min-width: 470px;
+	width: 100%;
+	}
+
+
+
+
+
+header h1 {
+	background: transparent url(1478893170_rocket.png) no-repeat top left;
+	margin-top: 10px;
+	display: block;
+	width: 219px;
+	height: 207px;
+	float: left;
+	position: relative;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	animation-name: rocketAnimation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
+	}
+
+
+header h2 {
+	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
+	margin-top: 58px; 
+	margin-bottom: 40px; 
+	width: 200px; 
+	height: 18px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header {
+	padding-top: 20px;
+	height: 87px;
+}
+
+.summary {
+	clear: both; 
+	margin: 20px 20px 20px 10px; 
+	width: 160px; 
+	float: left;
+	}
+.summary p {
+	font: italic 1.1em/2.2 georgia;
+	text-align: center;
+	}
+
+.preamble {
+	clear: right; 
+	padding: 0px 10px 0 10px;
+	}
+.supporting {	
+	padding-left: 10px; 
+	margin-bottom: 40px;
+	}
+
+footer { 
+	text-align: center; 
+	}
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+	}
+
+@keyframes sidebarAnimation {
+	0% {
+		font-size: 12px;
+	}
+	50% {
+		top: 300px;
+	}
+	100% {
+		color: #2F0743;
+	}
+}
+
+.sidebar {
+	animation-name: sidebarAnimation;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	margin-left: 600px; 
+	position: absolute; 
+	top: 0; 
+	right: 0;
+	}
+.sidebar .wrapper { 
+	font: 10px verdana, sans-serif;
+	padding: 10px; 
+	margin-top: 150px; 
+	width: 130px; 
+	}
+.sidebar h3.select {
+	margin: 10px 0 5px 0; 
+	width: 97px; 
+	height: 16px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives { 
+	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:57px; 
+	height: 14px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources { 
+	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:63px; 
+	height: 10px; 
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {
+	line-height: 1.3em; 
+	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+
+
+

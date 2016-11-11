@@ -1,0 +1,59 @@
+.animation {
+    animation-name: textAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    display: block;
+}
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.flex-item {
+    background: tomato;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.flex-item > div {
+    background-color: #cecece;
+    color: #000000;
+    display: none;
+    position: relative;
+}
+.flex-item:hover > img {
+    filter: blur(10px);
+}
+.flex-item:hover > div {
+    animation-name: textAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    display: block;
+}
+.flex-item:hover:after > div {
+    animation-name: textAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    display: block;
+}
+@keyframes textAnimation {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.6;
+        transform: translateY(-20px);
+    }
+}
+.text {
+    height: 100px;
+    bottom: 80px;
+}
