@@ -1,0 +1,38 @@
+lis 11, 2016 6:41:28 PM narzedzia.Wyrazenie <clinit>
+INFO: Uruchomiono KalkulatorONP
+lis 11, 2016 6:41:28 PM narzedzia.Wyrazenie <init>
+INFO: Zainicjalizowano wyrażenie: 5 4 +
+lis 11, 2016 6:41:28 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:5
+lis 11, 2016 6:41:28 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:4
+lis 11, 2016 6:41:28 PM narzedzia.Wyrazenie <init>
+INFO: Obliczono wyrażenie 5 4 +  = 9.0
+lis 11, 2016 6:41:31 PM narzedzia.Wyrazenie <init>
+INFO: Zainicjalizowano wyrażenie: 5 4 =
+lis 11, 2016 6:41:31 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:5
+lis 11, 2016 6:41:31 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:4
+lis 11, 2016 6:41:33 PM narzedzia.Wyrazenie <init>
+INFO: Zainicjalizowano wyrażenie: 5 4 
+lis 11, 2016 6:41:33 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:5
+lis 11, 2016 6:41:33 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:4
+lis 11, 2016 6:41:38 PM narzedzia.Wyrazenie <init>
+INFO: Zainicjalizowano wyrażenie: 5 4 + 
+lis 11, 2016 6:41:38 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:5
+lis 11, 2016 6:41:38 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:4
+lis 11, 2016 6:41:38 PM narzedzia.Wyrazenie <init>
+INFO: Obliczono wyrażenie 5 4 +   = 9.0
+lis 11, 2016 6:41:41 PM narzedzia.Wyrazenie <init>
+INFO: Zainicjalizowano wyrażenie: y 9 +
+lis 11, 2016 6:41:41 PM narzedzia.Wyrazenie <init>
+INFO: Tutaj sie cos dzieje
+lis 11, 2016 6:41:41 PM narzedzia.Wyrazenie <init>
+INFO: Wsadzilem na stos:9
+lis 11, 2016 6:41:41 PM narzedzia.Wyrazenie <init>
+INFO: Obliczono wyrażenie y 9 +  = 18.0
