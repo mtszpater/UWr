@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <title>TypeScript Greeter</title>
+<style>
+
+    body {
+        background: #43cea2; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        animation-iteration-count: infinite;
+    }
+
+    #box{
+        margin: 5% auto;
+        width: 640px;
+    }
+
+    #box div {
+        float: left;
+        width: 128px;
+        height: 128px;
+        margin: 5px;
+        background: url(none.png);
+    }
+
+    #box div img {
+        display: none;
+        border-radius: 10px;
+    }
+
+    @keyframes winAnimation {
+
+        0% {
+            background: #43cea2; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        25% {
+
+            background: #41295a; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #41295a , #2F0743); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #41295a , #2F0743); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        50% {
+
+            background: #F3904F; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #F3904F , #3B4371); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #F3904F , #3B4371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        100% {
+
+            background: #ee0979; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #ee0979 , #ff6a00); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #ee0979 , #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+    }
+
+
+</style>
+<script>
+    $(function () {
+
+        $("#box div").click(Open);
+
+    });
+
+    var Counter = 0;
+    var CurrentIMG = "";
+    var NextIMG = "";
+
+    function clearVariable(){
+        CurrentIMG = "";
+        NextIMG = "";
+    }
+
+    function increaseCounter(){
+        Counter++;
+    }
+
+    function setVisibility( Id ){
+        $("#" + Id + " img").parent().css("visibility", "hidden");
+        $("#" + NextIMG + " img").parent().css("visibility", "hidden");
+    }
+
+    function fadeOut( Id ){
+        $("#" + Id + " img").fadeOut(150);
+        $("#" + NextIMG + " img").fadeOut(150);
+    }
+
+    function fadeIn( Id ){
+        $("#" + Id + " img").fadeIn(500);
+    }
+
+    function checkWin(){
+        if (Counter == 10) {
+            win();
+        }
+    }
+
+
+    function Open() {
+        var Id = $(this).attr("id");
+
+        if ($("#" + Id + " img").is(":hidden")) {
+            fadeIn(Id);
+
+            if (CurrentIMG == "") {
+                CurrentIMG = $("#" + Id + " img").attr("src");
+                NextIMG = Id;
+            }
+
+            else {
+
+                if (CurrentIMG == $("#" + Id + " img").attr("src")) {
+                    setTimeout(function () {
+                        setVisibility(Id);
+                        increaseCounter();
+                        clearVariable()
+                        checkWin();
+                    }, 500);
+
+                } else {
+                    setTimeout(function () {
+                        fadeOut(Id);
+                        clearVariable()
+                    }, 500);
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+</script>
+</head>
+<body>
+<script src="memo.js">
+</script>
+</body>
+</html>
