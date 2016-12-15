@@ -1,0 +1,26 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function setCookie() {
+    var d = new Date();
+    d.setTime(d.getTime() + (10000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = "cookie" + "=" + "value" + ";" + expires + ";path=/";
+}
+
+setCookie();
+var x = document.cookie; 
+window.alert(x);
+
+
+
+</script>
+</head>
+</body>
+</html>
+
