@@ -1,0 +1,18 @@
+1. Bezstanowość http - każde odświeżenie strony/każde nowe zapytanie do serwera jest odbierane jako całkowicie nowe zapytanie tzn. nie przechowywane są żadne wcześniejsze informacje (oczywiscie nie mówimy tutaj o sytuacji w której używamy sesji). 
+Zmiana nagłówka Accept-Language powoduje zmianę języka na stronie w zależności od kolejności wysłanego nagłówka. (screen zad1)
+
+
+2. Skrypt oraz screen na gicie. W przypadku gdy zmienna GET i POST ma taka sama nazwe to get nie jest brane pod uwage. Content-Length to długosc przesyłanej zawartości bez nagłowka (liczona w bajtach).
+
+  4 kod na gicie
+
+7. mechanizm ciasteczek polega na wyslaniu z serwera do przegladarki jakiegos tekstu do pozniejszego uzycia (np. identyfikacji uzytkownika). screen lokalizacji ciasteczek w narzedziach deweloperskich tez dodany 
+
+8. Jeżeli ustawimy flagę HttpOnly to nie odczytamy ciastka przez javascript. jest to zabezpieczenie przed atakami typu Cross-site scripting (XSS) tylko HTTP moze odwolac sie do ciasteczka i je przejrzec 
+
+9. persistent cookie to ciastka ustawiane nawet na kilka lat (przyklad, mam ciastko z gazety.pl od 2 lat, które wygasa za rok!:D ), abysmy nie musieli sie ciagle wszedzie logowac za kazdym razem. w porownaniu do ciastek per sesja, ktore wygasaja jak sama nazwa mowi od razu po sesji :)
+
+10. domena w ciastku jest potrzebna (szczegolnie z powodu bezpieczenstwa). wyobrazmy sobie taką hipotetyczną sytuację. Mamy blog na wordpressie. W momencie zalogowania dostajemy ciasteczko, że jesteśmy zalogowani jako admin. Teraz przechodzimy na inną stronę, która również stoi na wordpressie (akurat jest bardzo popularny) i z racji, że system jest ten sam, jesteśmy z automatu zalogowani jako admin.
+path możemy ustawić, aby ciastko działało np. na podkatalogi typu domena.pl/katalog/ (path = katalog)
+
+
