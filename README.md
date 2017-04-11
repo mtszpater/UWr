@@ -11,3 +11,4 @@ Listy zadań i rozwiązane zadania
 * [Java] Edytor https://github.com/mtszpater/Edytor
 * [Java] Samotnik https://github.com/mtszpater/Samotnik
 * [C#] Kilka zadań z C# https://github.com/mtszpater/C-sharp
+* [Prolog] Dowód rezolucji https://github.com/mtszpater/uwr-mp-theorem-prover
