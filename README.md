@@ -2,7 +2,7 @@
 Listy zadań i rozwiązane zadania 
 
 
-##Trochę więcej z uczelni:
+## Trochę więcej z uczelni:
 * [ANL] Notatki https://github.com/mtszpater/Analiza-numeryczna-L
 * [SO] Problem producenta i konsumenta https://github.com/mtszpater/Producer-consumer
 * [SO] Algorytmy zastępowania stron https://github.com/mtszpater/algorytmy-zastepowania-stron
