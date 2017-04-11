@@ -12,3 +12,5 @@ Listy zadań i rozwiązane zadania
 * [Java] Samotnik https://github.com/mtszpater/Samotnik
 * [C#] Kilka zadań z C# https://github.com/mtszpater/C-sharp
 * [MP] Projekty z metod programowania https://github.com/mtszpater/uwr-metody-programowania
+* [AiSD] Projekty z algorytmów i struktur danych https://github.com/mtszpater/uwr-algorytmy-i-struktury-danych
+
