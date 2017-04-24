@@ -240,9 +240,36 @@ create table praktyki (
 
 
 
+-- Zdefiniuj perspektywę plan_zajec, która pokaże dla każdej osoby (studenta), 
+-- semestru i przedmiotu termin, w jakim osoba powinna uczęszczać na zajęcia z tego 
+-- przedmiotu (także do jakiej sali i kto prowadzi zajęcia).
+
+CREATE VIEW plan_zajec 
+    (student, termin, prowadzacy, sala, przedmiot, semestr, rok)
+AS
+    SELECT
+    w.kod_uz, g.termin, p.nazwisko, g.sala, przedmiot.nazwa, s2.semestr, s2.rok
+    FROM grupa g
+    JOIN pracownik p using (kod_uz)
+    JOIN wybor w using (kod_grupy)
+    JOIN przedmiot_semestr using (kod_przed_sem)
+    JOIN przedmiot using (kod_przed)
+    JOIN semestr s2 using (semestr_id)
+    JOIN student s ON s.kod_uz = w.kod_uz
+    GROUP BY 
+    w.kod_uz, g.termin, p.nazwisko, g.sala, przedmiot.nazwa, s2.semestr, s2.rok;
 
 
 
 
+-- Wykorzystaj perspektywę plan_zajec, by pokazać plan zajęć konkretnego studenta (wybierz dowolnie wg kodu) w konkretnym semestrze.
+select * from plan_zajec where student = 2619 AND rok = '2009/2010' and semestr = 'zimowy';
 
+-- Wykorzystaj perspektywę plan_zajec, by pokazać plan zajęć konkretnego pracownika (wybierz dowolnie wg kodu) w konkretnym semestrze.
+select distinct(przedmiot, termin) from plan_zajec where prowadzacy = 'Godowski' and semestr = 'letni';
+--  nie chcemy tutaj wszystkich studentów, którzy mają zajęcia w danej sali tylko po prostu, informacja, że takowe sie odbywają
+-- oczywiscie ta perspektywe mozemy zmienić, aby był id prowadzącego (aktualnie moze byc kolizja względem nazwisk)
+
+-- Wykorzystaj perspektywę plan_zajec, by pokazać plan w konkretnej sali w konkretnym semestrze.
+select distinct termin, prowadzacy, sala, przedmiot FROM plan_zajec where semestr = 'letni' AND rok = '2010/2011' AND sala = '103';
 
